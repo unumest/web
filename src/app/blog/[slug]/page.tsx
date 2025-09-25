@@ -1,21 +1,21 @@
 import { notFound } from "next/navigation";
-import { getPostBySlug } from "@/lib/posts";
+import { getAllSlugs, getPostBySlug } from "@/lib/posts";
 import { mdToHtml } from "@/lib/markdown";
 
-// export const dynamicParams = false;
+export const dynamicParams = false;
 
-// export async function generateStaticParams() {
-//   return getAllSlugs().map(slug => ({ slug }));
-// }
+export async function generateStaticParams() {
+  return getAllSlugs().map(slug => ({ slug }));
+}
 
-// export async function generateMetadata({ params }: { params: { slug: string } }) {
-//   const { meta } = getPostBySlug(params.slug);
-//   return {
-//     title: meta.title,
-//     description: meta.description,
-//     openGraph: { title: meta.title, description: meta.description },
-//   };
-// }
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { meta } = getPostBySlug(params.slug);
+  return {
+    title: meta.title,
+    description: meta.description,
+    openGraph: { title: meta.title, description: meta.description },
+  };
+}
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
   try {
