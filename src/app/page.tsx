@@ -7,7 +7,7 @@ export default function Home() {
   const posts = getAllPosts();
   return (
     <main className="mx-auto max-w-2xl p-6 space-y-8">
-      <h1 className="text-3xl font-bold">My Blog</h1>
+      <h1 className="text-3xl font-bold">________, Unum est.</h1>
       <ul className="space-y-4">
         {posts.map(p => (
           <li key={p.slug} className="border-b pb-4">

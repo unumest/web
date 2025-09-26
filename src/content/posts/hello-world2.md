@@ -1,7 +1,7 @@
 ---
-title: "Hello World3"
-date: "2025-09-01"
-description: "첫 글"
+title: "Hello World2"
+date: "2025-09-02"
+description: "두번째 글"
 tags: ["intro"]
 ---
 
